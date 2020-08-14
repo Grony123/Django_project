@@ -1,0 +1,27 @@
+{% extends 'task1/base.html' %}
+{% block content %}
+
+<h1>Sign-up</h1>
+<form  method="POST" >{% csrf_token %}
+
+
+  <label for="fname1">First name:</label>
+  <input type="text" id="fname1" name="name1"><br><br>
+  <label for="lname2">Last name:</label>
+  <input type="text" id="lname2" name="name2"><br><br>
+  <label for="mob">Phone no. :</label>
+  <input type="text" id="mob" name="mob"><br><br>
+  <label for="email">Email id :</label>
+  <input type="text" id="email" name="email"><br><br>
+   <div>Gender:</div>  <br>
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Other</label><br><br>
+  <input type="submit" value="Submit">
+</form>
+<br><br>
+<div><a href="{% url 'login1' %}">Already have an account! LOGIN</a> </div>
+{% endblock %}
